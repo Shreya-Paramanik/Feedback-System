@@ -1,0 +1,10 @@
+.h1{
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.card{
+  width: 20rem;
+  border: 2px solid black;
+  
+}
