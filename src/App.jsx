@@ -1,25 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './Components/Header'
-import Card from './Components/Card'
-import StatisticalCard from './Components/StatisticalCard'
+import Header from './Components/Welcome/Header'
+import Card from './Components/Welcome/Card'
+import StatisticalCard from './Components/Welcome/StatisticalCard'
+import Welcome from './Components/Welcome/Welcome'
 function App() {
   //const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Header/>
-      <div style={{display:'flex',justifyContent:'center',alignItems:'center', gap:'1rem',height:'300px'}}>
-        <Card/>
-        <Card/>
-      </div>
-
-      <div style={{display:'flex',justifyContent:'center',alignContent:'center',gap:'1rem'}}>
-        <StatisticalCard/>
-        <StatisticalCard/>
-        <StatisticalCard/>
-      </div>
-    </>
+    <div className='app-gradient'>
+      <Welcome/>
+    </div>
   )
 }
 

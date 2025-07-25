@@ -1,10 +1,10 @@
-.h1{
-  font-size: 35px;
-  font-weight: 800;
+html,body,#root{
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.card{
-  width: 20rem;
-  border: 2px solid black;
-  
+.app-gradient{
+  height: inherit;
+  background: linear-gradient(to bottom right,rgb(85, 85, 235),rgb(200, 106, 192));
 }
