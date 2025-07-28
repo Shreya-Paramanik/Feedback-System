@@ -12,14 +12,14 @@ const InnerDiv = ()=> {
       <div>
           <p className='User'>User</p>
           <p className='Type'>Type</p>
-          <p>Rating</p>   
-          <p>Message</p>
+          <p className='Rating'>Rating</p>   
+          <p className='Message'>Message</p>
       </div>
 
       <div>
-          <p>Status</p>
-          <p>Date</p>
-          <p>Actions</p>
+          <p className='Status'>Status</p>
+          <p className='Date'>Date</p>
+          <p className='Actions'>Actions</p>
       </div>
      </div>
      

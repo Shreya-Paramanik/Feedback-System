@@ -14,7 +14,7 @@ const Welcome = ()=> {
 
     const [icon,setIcon] = useState('message');
   return (
-    <>
+    <div className='app-gradient'>
       <Header/>
     <div style={{display:'flex',justifyContent:'center',alignItems:'center', gap:'1rem',height:'300px',marginTop:'20px'}}>
         <Card>
@@ -71,7 +71,7 @@ const Welcome = ()=> {
             </div>
         </StatisticalCard>
     </div>
-    </>
+    </div>
   )
 }
 

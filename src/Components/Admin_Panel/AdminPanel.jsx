@@ -4,7 +4,7 @@ import "./AdminPanel.css"
 
 function AdminPanel() {
   return (
-    <div className="header">
+    <div className="Admin_header">
       <div className="header-left">
         <h2>Admin Panel</h2>
       </div>

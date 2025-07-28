@@ -1,4 +1,4 @@
-.header {
+.Admin_header{
   display: flex;
   justify-content: space-between;
   background: white;
@@ -24,20 +24,63 @@
     margin-top: 10%;
     
 }
-p{
+/* p{
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 50px;
+} */
+
+.User{
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 50px;
+    margin-left: 20px;
+    margin-right: 30px; 
+}
+
+.Type{
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 50px;
+    margin-left:150px ; 
+}
+
+.Rating{
     display: inline;
     font-size: 18px;
     font-weight: 700;
     margin: 0px 50px;
 }
 
-.User{
-    margin-left: 20px;
-    /* margin-right: 30px; */
+.Message{
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 50px;
 }
 
-.Type{
-   margin-left:150px ; 
+.Status{
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 50px;
+}
+
+.Date{
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 50px;
+}
+
+.Actions{
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 50px;
 }
 
 .p_div{
