@@ -1,0 +1,14 @@
+.labels{
+  margin-bottom: 20px;
+}
+
+.file{
+  
+  border:2px dashed #ccc;
+  padding:8px;
+  border-radius: 16px;
+}
+
+.text{
+  font-size: x-small;
+}

@@ -1,0 +1,15 @@
+.btn{
+    width:95%;
+    padding:12px;
+    background:linear-gradient(to right,#9392dc,#bc9fdf);
+    color:white;
+    cursor: pointer;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease,transform 0.2s ease;
+    border:none;
+  }
+
+.btn:hover{
+      background:linear-gradient(to right,#7a5cf3,#6750a4);
+  }

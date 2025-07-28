@@ -1,0 +1,17 @@
+.details{
+  display:flex;
+  gap:25px;
+  flex-wrap: wrap;
+}
+
+.labels{
+  margin-bottom: 20px;
+}
+
+.inputs{
+  border-radius: 18px;
+  border:1px solid #ccc;
+  flex:1;
+  padding:10px;
+  width: 210px;
+}

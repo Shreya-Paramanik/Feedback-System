@@ -1,0 +1,31 @@
+.labels{
+  margin-bottom: 20px;
+}
+
+.feedback{
+  display:flex;
+  gap:10px;
+  flex-wrap: wrap;
+}
+
+.box{
+  border-radius:10px;
+  flex:1;
+  height:70px;
+  width:auto;
+  padding:10px;
+
+}
+
+.selected{
+  background-color: rgb(200, 181, 224);
+  border: 1px solid #1064eb;
+}
+
+.unselected{
+  background-color: white;
+  border:1px solid #ccc;
+
+}
+
+
