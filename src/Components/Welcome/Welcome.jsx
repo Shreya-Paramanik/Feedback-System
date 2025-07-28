@@ -7,12 +7,23 @@ import { FiMessageSquare } from "react-icons/fi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosStarOutline } from "react-icons/io";
 import { GoPeople } from "react-icons/go";
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Welcome = ()=> {
 
     const [icon,setIcon] = useState('message');
+    const navigate = useNavigate();
+
+
+    const handleClick=()=>{
+        navigate('/SubmitFeedback')
+    }
+
+    const handleClick2=()=>{
+        navigate('/adminLogin')
+    }
   return (
     <div className='app-gradient'>
       <Header/>
@@ -25,7 +36,7 @@ const Welcome = ()=> {
                </div>
              <h5 className="card-title" style={{fontSize: '28px', marginTop:'50px'}}>Submit Feedback</h5>
              <p className="card-text" style={{fontSize: '16px'}}>Share your suggestions, report bugs, or tell us what you love</p>
-             <button className="btn btn-primary" type="button" id='card_button' style={{width:'100%',height:'45px',borderRadius:'25px'}}>Get Started</button>
+             <button className="btn btn-primary" type="button" id='card_button' style={{width:'100%',height:'45px',borderRadius:'25px'}} onClick={handleClick}>Get Started</button>
             </div>
         </Card>
         <Card>
@@ -35,7 +46,7 @@ const Welcome = ()=> {
                 </div>
              <h5 className="card-title" style={{fontSize: '28px',marginTop:'50px'}}>Admin Dashboard</h5>
              <p className="card-text" style={{fontSize: '16px'}}>Manage and review feedback submssion from user.</p>
-             <button className="btn btn-outline-primary" type="button" id='card_button2'  style={{width:'100%',height:'45px',borderRadius:'25px'}}>Admin Access</button>
+             <button className="btn btn-outline-primary" type="button" id='card_button2'  style={{width:'100%',height:'45px',borderRadius:'25px'}} onClick={handleClick2}>Admin Access</button>
             </div>
         </Card>
     </div>

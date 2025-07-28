@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 import { IoShieldOutline } from "react-icons/io5";
 import { GoArrowLeft } from "react-icons/go";
 import './AdminLogin.css';
+import { useNavigate } from 'react-router-dom';
 
 const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick =()=>{
+     navigate('/Dashboard')
+  }
 
   return (
    <div className="login-container">
@@ -29,7 +35,7 @@ const AdminLogin = () => {
                     </div>
                </div>
 
-               <button className="sign-in-button">Sign In</button>
+               <button className="sign-in-button" onClick={handleClick}>Sign In</button>
 
                <div className="demo-credentials">
                      <p><strong>Demo Credentials:</strong></p>

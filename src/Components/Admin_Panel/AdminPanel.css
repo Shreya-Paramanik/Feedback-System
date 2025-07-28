@@ -2,11 +2,39 @@
   display: flex;
   justify-content: space-between;
   background: white;
-  padding: 20px;
+  padding: 25px;
+  height: 80px;
   border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 2px black;
 }
 
-.Feedback_Dash{
+
+.item{
+    font-size: 20px;
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    border-radius:15px;
+    border-color: rgb(196, 206, 209);
+}
+
+.item:active{
+    background: linear-gradient(to bottom right,rgb(85, 85, 235),rgb(200, 106, 192));
+    color: white;
+}
+
+.Feedback{
+    border: 2px solid rgb(196, 206, 209);
+    height: 550px;
+    width: 1300px;
+    margin-top: 30px;
+    margin-left: 300px; 
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 2px black;
+
+}
+ .Feedback_Dash{
     background-color: white;
     border: 1px solid black;
     border-radius: 15px;
@@ -14,7 +42,7 @@
     width: 1300px;
     margin-top: 300px;
     margin-left: 300px; 
-    padding: 15px;
+    padding: 15px; 
 }
 
 .Inner_div{
@@ -23,7 +51,7 @@
     height:70%;
     margin-top: 10%;
     
-}
+} */
 /* p{
     display: inline;
     font-size: 18px;
@@ -31,7 +59,8 @@
     margin: 0px 50px;
 } */
 
-.User{
+
+/* .User{
     display: inline;
     font-size: 18px;
     font-weight: 700;
@@ -90,6 +119,5 @@
     border-radius: 20px;
     height: 50px;
     background-color: rgb(239, 229, 229)
-}
-
+} */
 

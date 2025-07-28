@@ -1,4 +1,4 @@
-Gradient background
+/* Gradient background */
 body {
   height: 100%;
   margin: 0;
@@ -10,8 +10,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
+  height: 800px;
+  
+  }
 
 .login-box {
   width: 100%;
@@ -83,6 +84,7 @@ h2 {
 }
 
 .password-wrapper input {
+  margin-top: 20px;
   padding-right: 0.6rem;
   position: relative;
 }
@@ -119,3 +121,4 @@ h2 {
   font-size: 13px;
   color: #555;
 }
+
