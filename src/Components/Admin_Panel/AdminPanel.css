@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.Feedback_Dash{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 550px;
+    width: 1300px;
+    margin-top: 300px;
+    margin-left: 300px; 
+    padding: 15px;
+}
+
+.Inner_div{
+    border: 2px solid black;
+    border-radius: 15px;
+    height:70%;
+    margin-top: 10%;
+    
+}
+p{
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 50px;
+}
+
+.User{
+    margin-left: 20px;
+    /* margin-right: 30px; */
+}
+
+.Type{
+   margin-left:150px ; 
+}
+
+.p_div{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-radius: 20px;
+    height: 50px;
+    background-color: rgb(239, 229, 229)
+}
+
+
