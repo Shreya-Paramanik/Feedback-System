@@ -1,6 +1,6 @@
-import SearchBar from "./SearchBar";
 import FilterDropdown from "./FilterDropdown";
 import { IoFunnelOutline } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
 
 const Filters = () => {
     const typeOptions = ["All Types", "Bug", "Suggestions", "Complaint", "Praise"];
@@ -9,7 +9,10 @@ const Filters = () => {
 
     return (
         <div className="filters">
-            <SearchBar></SearchBar>
+            <div className="search-wrapper">
+             <CiSearch className="search-icon" />
+             <input type='text' className="search-input" placeholder='Search feedback...' />
+            </div>
             <FilterDropdown options={typeOptions}></FilterDropdown>
             <FilterDropdown options={ratingOptions}></FilterDropdown>
             <FilterDropdown options={statusOptions}></FilterDropdown>

@@ -1,4 +1,4 @@
-.app-gradient{
+.app_gradient{
   min-width: 100vw;
   min-height: 100vh;
   background: linear-gradient(to bottom right,rgb(85, 85, 235),rgb(200, 106, 192));

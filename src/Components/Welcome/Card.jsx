@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import "./App.css"
-import './Welcome.css'
+import styles from './Welcome.module.css'
 import { FiMessageSquare } from "react-icons/fi";
 
 const Card = (props)=> {
