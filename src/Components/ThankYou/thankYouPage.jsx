@@ -10,14 +10,7 @@ const thankYouPage = () => {
 
     const navigate = useNavigate();
 
-    const handleClick = ()=>{
-        navigate('/')
-        
-    }
-
-    const handleClick2 = ()=>{
-        navigate('/SubmitFeedback')
-    }
+  
     return (
         <div className="container">
             <div className="box">
@@ -27,8 +20,8 @@ const thankYouPage = () => {
                 <h2 className="thanks_h2"><b>Thank you for your feedback!</b></h2>
                 <p className="thanks">We appreciate you taking the time to share your thoughts with us. Your feedback helps us improve our services and create better experiences.</p>
                 <div className="btn-group">
-                    <button className="primary" onClick={handleClick}><BiHomeAlt /> Return to Homepage</button>
-                    <button className="secondary" onClick={handleClick2}><FiMessageSquare /> Submit Another Feedback</button>
+                    <button className="primary" onClick={()=>{ navigate('/')}}><BiHomeAlt /> Return to Homepage</button>
+                    <button className="secondary" onClick={()=>{navigate('/SubmitFeedback')}}><FiMessageSquare /> Submit Another Feedback</button>
                 </div>
             </div>
         </div>

@@ -8,14 +8,12 @@ const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  const handleClick =()=>{
-     navigate('/Dashboard')
-  }
+  
 
   return (
    <div className="login-container">
       <div className="login-box">
-         <a href="#" className="back-link"> <GoArrowLeft />  Back to Home</a>
+         <a href="/" className="back-link" onClick={()=>{navigate('/')}}> <GoArrowLeft />  Back to Home</a>
 
            <div className="login-card">
                <div className="login-icon"><IoShieldOutline /></div>
@@ -24,23 +22,20 @@ const AdminLogin = () => {
  
                <div className="input-group">
                     <label><b>Username</b></label>
-                    <input type="text" placeholder="Enter your username" />
+                    <input type="text" placeholder="Enter your username" style={{borderRadius:'15px'}}/>
                </div>
 
                <div className="input-group">
                     <label><b>Password</b></label>
-                    <div className="password-wrapper">
-                       <input  type={showPassword ? 'text' : 'password'} placeholder="Enter your password" />
+                    
+                       <input  type={showPassword ? 'text' : 'password'} placeholder="Enter your password" style={{borderRadius:'15px'}} />
                        <span className="toggle-eye" onClick={() => setShowPassword(!showPassword)}> </span>
-                    </div>
+                    
                </div>
 
-               <button className="sign-in-button" onClick={handleClick}>Sign In</button>
+               <button className="sign-in-button" onClick={()=>{navigate('/Dashboard')}}>Sign In</button>
 
-               <div className="demo-credentials">
-                     <p><strong>Demo Credentials:</strong></p>
-                     <small>Username: <code>admin</code> | Password: <code>password</code></small>
-               </div>
+               
            </div>
        </div>
    </div>

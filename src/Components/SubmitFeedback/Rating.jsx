@@ -1,5 +1,6 @@
 import {useState} from "react";
 import "./Rating.css";
+import { useFormContext } from "react-hook-form";
 import { GoStar } from "react-icons/go";
 const Rating = () => {
   const [rating, setRating] = useState(0);
@@ -8,16 +9,19 @@ const Rating = () => {
     setRating(value);
   };
 
+  const {register,setValue} =useFormContext();
+
   return (
     <div className="rating-div">
-        <label className="labels"><b>Rating:</b></label>
-        <br/><br/>
+        <label className="labels"><b style={{fontSize:'20px'}}>Rating:</b></label>
+        <br/>
         <div className='stars'>
+          <input type="hidden" {...register('Rating',{required:true})}/>
           {[1, 2, 3, 4, 5].map((star) => (
             <span
               key={star}
               className={rating >= star ? 'star filled' : 'star'}
-              onClick={() => handleRating(star)}
+              onClick={() => {handleRating(star);setValue('Rating',star);}}
             >
               <big><GoStar /></big>
             </span>

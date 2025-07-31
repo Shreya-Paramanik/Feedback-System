@@ -1,4 +1,4 @@
-/* .stars {
+.stars {
   display: flex;
   gap: 10px;
   cursor: pointer;
@@ -8,6 +8,7 @@
   font-size: 24px;
   color: #ccc;
   transition: color 0.2s;
+  padding-right: 10px;
 }
 
 .star.filled {
@@ -16,4 +17,4 @@
 
 .labels{
   margin-bottom: 20px;
-} */
+}

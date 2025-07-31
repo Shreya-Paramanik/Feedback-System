@@ -1,3 +1,4 @@
+import {useForm, FormProvider} from 'react-hook-form';
 import Details from "./Details";
 import Feedback from "./Feedback";
 import Rating from "./Rating";
@@ -6,8 +7,11 @@ import File from "./File";
 import Button from "./Button";
 
 function Form(){
+  const methods = useForm();
   return(
     <>
+    <FormProvider {...methods}>
+      <form onSubmit={methods.handleSubmit((data)=>{console.log("Form Submitted:",data);})}>
       <Details />
       <br/>
       <Feedback />
@@ -20,8 +24,9 @@ function Form(){
       <br/>
       <Button/>
       <br/>
-    </>
-
+      </form>
+      </FormProvider>
+      </>
   );
 };
 export default Form;

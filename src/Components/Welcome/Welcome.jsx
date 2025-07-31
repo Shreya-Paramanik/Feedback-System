@@ -8,6 +8,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosStarOutline } from "react-icons/io";
 import { GoPeople } from "react-icons/go";
 import { useNavigate } from 'react-router-dom';
+import Icon from './Icon';
 
 
 
@@ -17,13 +18,7 @@ const Welcome = ()=> {
     const navigate = useNavigate();
 
 
-    const handleClick=()=>{
-        navigate('/SubmitFeedback')
-    }
-
-    const handleClick2=()=>{
-        navigate('/adminLogin')
-    }
+    
   return (
     <div className={styles.app_gradient}>
       <Header/>
@@ -31,22 +26,21 @@ const Welcome = ()=> {
         <Card>
             
             <div className="card-body" style={{marginTop:'5%'}}>
-                <div className={styles.icon_div2}>
-                 <FiMessageSquare className='icon2'/>
-               </div>
+                
+            <Icon icon={FiMessageSquare} color='blue' size={30} bgColor="rgba(188, 188, 236, 1)"/>
              <h5 className="card-title" style={{fontSize: '28px', marginTop:'50px'}}>Submit Feedback</h5>
              <p className="card-text" style={{fontSize: '16px'}}>Share your suggestions, report bugs, or tell us what you love</p>
-             <button className="btn btn-primary" type="button" id={styles.card_button} style={{width:'100%',height:'45px',borderRadius:'25px'}} onClick={handleClick}>Get Started</button>
+             <button className="btn btn-primary" type="button" id={styles.card_button} style={{width:'100%',height:'45px',borderRadius:'25px'}} onClick={()=>{navigate('/SubmitFeedback')}}>Get Started</button>
             </div>
         </Card>
         <Card>
             <div className="card-body" style={{marginTop:'10%'}}>
-                <div className={styles.icon_div2} style={{backgroundColor:'rgb(235, 150, 233,0.4)',padding: '8px',borderRadius: '15px'}}>
-                 <IoSettingsOutline className={styles.icon2} style={{color:'purple'}}/>
-                </div>
+                
+                 <Icon icon={IoSettingsOutline} color='purple' size={30} bgColor="rgba(238, 196, 238, 1)"/>
+                
              <h5 className="card-title" style={{fontSize: '28px',marginTop:'50px'}}>Admin Dashboard</h5>
              <p className="card-text" style={{fontSize: '16px'}}>Manage and review feedback submssion from user.</p>
-             <button className="btn btn-outline-primary" type="button" id={styles.card_button2}  style={{width:'100%',height:'45px',borderRadius:'25px'}} onClick={handleClick2}>Admin Access</button>
+             <button className="btn btn-outline-primary" type="button" id={styles.card_button2}  style={{width:'100%',height:'45px',borderRadius:'25px'}} onClick={()=>{navigate('/adminLogin')}}>Admin Access</button>
             </div>
         </Card>
     </div>
@@ -55,7 +49,7 @@ const Welcome = ()=> {
         <StatisticalCard>
             <div className="card-body">
                 <div className={styles.icon_div3}>
-                    <GoPeople className='icon3'/>
+                    <GoPeople className={styles.icon3}/>
                 </div>
                 <h5 className="card-title" style={{fontSize: '28px',marginTop:'5px'}}>1234</h5>
                 <p>Happy users</p>

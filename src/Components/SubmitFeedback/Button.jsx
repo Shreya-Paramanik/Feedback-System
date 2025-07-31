@@ -3,14 +3,11 @@ import styles from "./Button.module.css";
 
 function Button(){
 
-  const Navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleClick = ()=>{
-    Navigate('/thankYou')
-  }
   return(
     <center>
-    <button className={styles.btn} onClick={handleClick}><b>Submit Feedback</b></button>
+    <button  type="submit" className={styles.btn}><b>Submit Feedback</b></button>
     </center>
   );
 };

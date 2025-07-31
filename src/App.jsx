@@ -5,15 +5,16 @@ import Header from './Components/Welcome/Header'
 import Card from './Components/Welcome/Card'
 import StatisticalCard from './Components/Welcome/StatisticalCard'
 import Welcome from './Components/Welcome/Welcome'
-import FeedbackDash from './Components/Admin_Panel/FeedbackDash'
+import FeedbackTable from './Components/Dashboard/FeedbackTable'
+import StatsCards from './Components/Dashboard/StatsCard'
 import AdminLogin from './Components/Admin_Login/AdminLogin'
-import AdminPanel from './Components/Admin_Panel/AdminPanel';
+import DashboardHeader from './Components/Dashboard/DashboardHeader'
 import ThankYouPage from "./Components/ThankYou/thankYouPage"
 import Submit from './Components/SubmitFeedback/Submit'
 function App() {
   //const [count, setCount] = useState(0)
 
-  // const navigate = useNavigate();
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -25,10 +26,12 @@ function App() {
 
         <Route path='adminLogin' element={<AdminLogin/>}></Route>
 
-        <Route path='Dashboard' element={<AdminPanel/>}></Route>
+        <Route path='Dashboard' element={<DashboardHeader/>}></Route>
 
       </Routes>
     </BrowserRouter>
+
+  
       
     
   )

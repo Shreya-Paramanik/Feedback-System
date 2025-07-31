@@ -1,8 +1,9 @@
-/* .iconBox{
+.iconBox{
   color:rgb(98, 98, 231);
   background-color: rgb(217, 237, 251);
   border-radius:15px;
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   padding:5px;
-} */
+  margin-bottom: 10px;
+}
