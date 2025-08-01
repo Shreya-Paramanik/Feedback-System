@@ -15,24 +15,20 @@ function Feedback() {
     {
       icon:<IoBugOutline />,
       label:"Bug Report",
-      
     },
     {
       icon:<FiAlertTriangle />,
       label:"Complaint",
-       
     },
     {
       icon:<CiHeart />,
       label:"Praise",
-    
     }
   
   ]
 
   const{register,setValue} =useFormContext();
   const [selectedType, setSelectedType] = useState(null);
-  const [color,setColor] = useState('');
         
   return (
     <>
@@ -43,10 +39,8 @@ function Feedback() {
   <button
       type="button"
       className={`${styles.box} 
-        ${(selectedType===item.label && color)? styles.selected : styles.unselected}`}
-        onClick={()=>{setSelectedType(item.label);
-          setColor(item.color);
-          setValue('Feedback Type',item.label);}}
+        ${selectedType===item.label? styles.selected : styles.unselected}`}
+        onClick={()=>{setSelectedType(item.label);setValue('Feedback Type',item.label);}}
         key={index}>
       <center>
       <big>{item.icon}</big><br/>
@@ -58,4 +52,4 @@ function Feedback() {
     </>
   );
 };
-export default Feedback;
+export default Feedback;

@@ -7,7 +7,7 @@ function Button(){
 
   return(
     <center>
-    <button  type="submit" className={styles.btn} onClick={()=>{navigate("/thankYou")}}><b>Submit Feedback</b></button>
+    <button  type="submit" className={styles.btn} onSubmit={()=>{navigate("/thankYou")}}><b>Submit Feedback</b></button>
     </center>
   );
 };
