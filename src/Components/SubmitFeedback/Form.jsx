@@ -1,4 +1,5 @@
 import {useForm, FormProvider} from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import Details from "./Details";
 import Feedback from "./Feedback";
 import Rating from "./Rating";
@@ -8,10 +9,14 @@ import Button from "./Button";
 
 function Form(){
   const methods = useForm();
+  const navigate = useNavigate();
+
   return(
     <>
     <FormProvider {...methods}>
-      <form onSubmit={methods.handleSubmit((data)=>{console.log("Form Submitted:",data);})}>
+      <form onSubmit={methods.handleSubmit((data)=>{console.log("Form Submitted:",data);
+        navigate("/thankYou");
+      })}>
       <Details />
       <br/>
       <Feedback />
