@@ -10,7 +10,6 @@ function File(){
         <input type="file" placeholder="Select file" name="uploadfile"  className="inputs"
         accept=".png, .jpg, .jpeg, .pdf, .doc, .docx"
         {...register('FileUpload', {
-          required: true,
           validate: {
             fileSize: (value) => {
               const file = value[0];

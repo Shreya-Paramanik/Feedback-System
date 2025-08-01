@@ -14,6 +14,8 @@
   height:100px;
   width:auto;
   padding:10px;
+  background-color: white;
+  border:1px solid #ccc;
 
 }
 
@@ -22,10 +24,10 @@
   border: 1px solid #1064eb;
 }
 
-.unselected{
+/* .unselected{
   background-color: white;
   border:1px solid #ccc;
 
-}
+} */
 
 

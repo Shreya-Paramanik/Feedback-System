@@ -25,11 +25,13 @@ const DashboardHeader = () => {
             </div>
             <div className="dash_header-buttons">
                 <button className="item" onClick={()=>{navigate("/")}}><BiHomeAlt size={25} /> Home</button>
-                <button className="item"><FiLogOut  size={25}/> Logout</button>
+                <button className="item" onClick={()=>{navigate("/")}}><FiLogOut  size={25}/> Logout</button>
             </div>
         </div>
-        <StatsCards/>
-        <FeedbackTable/>
+          <div style={{marginTop:'120px'}}>
+            <StatsCards/>
+           <FeedbackTable/>
+          </div>
         </div>
 );
 }

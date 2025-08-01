@@ -24,9 +24,9 @@ function App() {
 
         <Route path='/thankYou' element={<ThankYouPage/>}></Route>
 
-        <Route path='adminLogin' element={<AdminLogin/>}></Route>
+        <Route path='/adminLogin' element={<AdminLogin/>}></Route>
 
-        <Route path='Dashboard' element={<DashboardHeader/>}></Route>
+        <Route path='/Dashboard' element={<DashboardHeader/>}></Route>
 
       </Routes>
     </BrowserRouter>
