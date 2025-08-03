@@ -12,8 +12,10 @@ function File(){
         <input type="file" placeholder="Select file" name="uploadfile"  className="inputs"
         accept=".png, .jpg, .jpeg, .pdf, .doc, .docx"{...register('file', {
           validate: (fileList) => {
+           //List const file = fileList[0];
+            if (!fileList || fileList.length === 0) return true; // File is optional
+
             const file = fileList[0];
-            if (!file) return true; // File is optional
             const maxSizeInBytes = 10 * 1024 * 1024; // 10MB
             return file.size <= maxSizeInBytes || 'File must be 10MB or less';
           },

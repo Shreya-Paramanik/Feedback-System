@@ -8,7 +8,7 @@ function About(){
     <>
     <label htmlFor='message' className={styles.labels}><b style={{fontSize:'20px'}}>Feedback Message</b></label><br/>
     <div className="about">
-    <textarea placeholder="Please share your feedback..." name="message" cols="73" rows="6" className={styles.textarea}{...register('Description', { required: true })}></textarea>
+    <textarea placeholder="Please share your feedback..." name="message" cols="73" rows="6" className={styles.textarea}{...register('message', { required: true })}></textarea>
     </div>
     </>
   );

@@ -34,13 +34,13 @@ function Feedback() {
     <>
   <label htmlFor='feedbacktype' className={styles.labels}><b style={{fontSize:'20px'}}>Feedback Type</b></label><br/>
   <div className={styles.feedback}>
-    <input type="hidden" {...register('Feedback Type',{required:true})}/>
+    <input type="hidden" {...register("type",{required:true})}/>
   { display.map((item,index) => (
   <button
       type="button"
       className={`${styles.box} 
         ${selectedType===item.label? styles.selected : styles.unselected}`}
-        onClick={()=>{setSelectedType(item.label);setValue('Feedback Type',item.label);}}
+        onClick={()=>{setSelectedType(item.label);setValue('type',item.label);}}
         key={index}>
       <center>
       <big>{item.icon}</big><br/>

@@ -10,7 +10,7 @@ function Details(){
       <div className='naming'>
           <label htmlFor='fullname' className={styles.labels}><b style={{fontSize:'20px'}}>Name</b></label><br/>
           <input type='text' placeholder='Your name' name='name' className={styles.inputs}
-          {...register('Name',
+          {...register('name',
               { required: true,
                 minLength:{value:3,message:"Min characters at least 3"},
                 maxLength:{value:50,message:"Max characters at least 50"}})}/>
@@ -19,7 +19,7 @@ function Details(){
       <div className='mailing'>
           <label htmlFor='email' className={styles.labels}><b style={{fontSize:'20px'}}>Email</b></label><br/>
           <input type='email' placeholder='your@email.com' name='email' className={styles.inputs}
-          {...register('Email', 
+          {...register('email', 
           { required: true ,
             pattern: {value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,message: "Invalid email address"}})}/>
             {errors.Email &&<p style={{color:'red'}}>{errors.Email.message}</p>}

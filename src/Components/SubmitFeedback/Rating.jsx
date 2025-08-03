@@ -16,12 +16,12 @@ const Rating = () => {
         <label className="labels"><b style={{fontSize:'20px'}}>Rating:</b></label>
         <br/>
         <div className='stars'>
-          <input type="hidden" {...register('Rating',{required:true})}/>
+          <input type="hidden" {...register("rate",{required:true})}/>
           {[1, 2, 3, 4, 5].map((star) => (
             <span
               key={star}
               className={rating >= star ? 'star filled' : 'star'}
-              onClick={() => {handleRating(star);setValue('Rating',star);}}
+              onClick={() => {handleRating(star);setValue('rate',star);}}
             >
               <big><GoStar /></big>
             </span>

@@ -32,6 +32,6 @@
  
 }
 
-.header-buttons button:hover {
-  background-color: #e5e7eb;
+.dash_header-buttons button:hover {
+  background: linear-gradient(to bottom right,rgb(85, 85, 235),rgb(200, 106, 192));
 }
