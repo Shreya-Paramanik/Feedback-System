@@ -15,8 +15,8 @@ function Form(){
 
   const handleForm = async(data) => {
 
-    console.log(data);
-    navigate("/thankYou");
+    // console.log(data);
+    // navigate("/thankYou");
     const formData = new FormData();
     formData.append("name", data.name);
     formData.append("email", data.email);

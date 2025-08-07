@@ -14,7 +14,7 @@ function Feedback() {
     },
     {
       icon:<IoBugOutline />,
-      label:"Bug Report",
+      label:"Bug",
     },
     {
       icon:<FiAlertTriangle />,
