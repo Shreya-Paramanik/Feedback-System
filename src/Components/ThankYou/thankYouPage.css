@@ -89,4 +89,5 @@
 .secondary:hover{
     border: 1px solid black;
     background: linear-gradient(to right, rgb(85, 85, 235) 45%, rgb(213, 29, 198));
+    color: white;
 }

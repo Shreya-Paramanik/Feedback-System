@@ -7,7 +7,7 @@ function File(){
   const fileSize = watch("file")
   return(
     <>
-    <label htmlFor='uploadfile' className={styles.labels}><b style={{fontSize:'20px'}}>Upload File</b></label>
+    <label htmlFor='uploadfile' className={styles.labels}><b style={{fontSize:'20px'}}>Upload File(Optional)</b></label>
     <div className={styles.file}>
         <input type="file" placeholder="Select file" name="uploadfile"  className="inputs"
         accept=".png, .jpg, .jpeg, .pdf, .doc, .docx"{...register('file', {

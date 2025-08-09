@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './Header';
 import styles from './Welcome.module.css'
 import StatisticalCard from './StatisticalCard';
@@ -9,13 +9,32 @@ import { IoIosStarOutline } from "react-icons/io";
 import { GoPeople } from "react-icons/go";
 import { useNavigate } from 'react-router-dom';
 import Icon from './Icon';
-
+import axios from 'axios';
 
 
 const Welcome = ()=> {
 
     const [icon,setIcon] = useState('message');
     const navigate = useNavigate();
+
+    const [Data,setData] = useState([]);
+    useEffect(()=>{
+
+        const update_dash = async()=>{
+
+            const result = await axios.get("http://127.0.0.1:8000/api/stats");
+            console.log(result);
+            
+            if(result.request.status === 200){
+                setData(result.data);
+            }
+
+        }
+
+        update_dash();
+    },[]);
+
+    console.log(Data);
 
 
     
@@ -51,7 +70,7 @@ const Welcome = ()=> {
                 <div className={styles.icon_div3}>
                     <GoPeople className={styles.icon3}/>
                 </div>
-                <h5 className="card-title" style={{fontSize: '28px',marginTop:'5px'}}>1234</h5>
+                <h5 className="card-title" style={{fontSize: '28px',marginTop:'5px'}}>{Data.happyUsers}</h5>
                 <p>Happy users</p>
             </div>
         </StatisticalCard>
@@ -62,7 +81,7 @@ const Welcome = ()=> {
                  <FiMessageSquare className={styles.icon3}/>
                 </div>
                 
-                <h5 className='card-title' style={{fontSize: '28px',marginTop:'5px'}}>567</h5>
+                <h5 className='card-title' style={{fontSize: '28px',marginTop:'5px'}}>{Data.totalFeedback}</h5>
                 <p>Feedback Received</p>
             </div>
         </StatisticalCard>
@@ -71,7 +90,7 @@ const Welcome = ()=> {
                 <div className={styles.icon_div3}>
                     <IoIosStarOutline className={styles.icon3}/>
                 </div>
-                <h5 className='card-title' style={{fontSize:'28px',marginTop:'5px'}}>4.8</h5>
+                <h5 className='card-title' style={{fontSize:'28px',marginTop:'5px'}}>{Data.averageRating}</h5>
                 <p>Average Rating</p>
             </div>
         </StatisticalCard>

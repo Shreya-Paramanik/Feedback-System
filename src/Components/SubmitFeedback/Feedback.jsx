@@ -32,7 +32,7 @@ function Feedback() {
         
   return (
     <>
-  <label htmlFor='feedbacktype' className={styles.labels}><b style={{fontSize:'20px'}}>Feedback Type</b></label><br/>
+  <label htmlFor='feedbacktype' className={styles.labels}><b style={{fontSize:'20px'}}><p style={{display:'inline',color:"red"}}>* </p>Feedback Type</b></label><br/>
   <div className={styles.feedback}>
     <input type="hidden" {...register("type",{required:true})}/>
   { display.map((item,index) => (

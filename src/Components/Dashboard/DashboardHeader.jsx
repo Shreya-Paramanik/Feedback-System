@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './DashboardHeader.css';
 import { FiMessageSquare } from "react-icons/fi";
 import StatsCards from "./StatsCard";
@@ -7,12 +7,29 @@ import FeedbackRow from "./FeedbackRow";
 import { useNavigate } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 import { FiLogOut } from "react-icons/fi";
+import axios from "axios";
 
 
 const DashboardHeader = () => {
 
     const navigate = useNavigate();
 
+    const [Data,setData] = useState([]);    
+    
+    useEffect(()=>{
+        const update_dash = async()=>{
+
+            const result = await axios.get("http://127.0.0.1:8000/api/stats");
+            console.log(result);
+            
+            if(result.request.status === 200){
+                setData(result.data);
+            }
+
+        }
+
+        update_dash();
+    },[]);
     return (
         <div style={{width:'100vw'}}>
         <div className="dash_header">
@@ -29,7 +46,7 @@ const DashboardHeader = () => {
             </div>
         </div>
           <div style={{marginTop:'120px'}}>
-            <StatsCards/>
+            <StatsCards Data = {Data}/>
            <FeedbackTable/>
           </div>
         </div>

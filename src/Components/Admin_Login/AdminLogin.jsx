@@ -5,6 +5,7 @@ import { GoArrowLeft } from "react-icons/go";
 import './AdminLogin.css';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -16,9 +17,24 @@ const AdminLogin = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Form submitted with:", data);
-    navigate('/Dashboard');
+
+  
+  const onSubmit = async (data) => {
+     
+
+    console.log(data); 
+    try {
+      const response = await axios.post("http://127.0.0.1:8000/Admin_Login",data);
+      // console.log(response);
+
+      if(response.status === 200){
+        alert("Login Successful");
+        navigate('/Dashboard');
+      }
+      } catch (error) {
+      alert("Login Failed");
+      console.log(error);
+    }
   };
 
   return (
@@ -50,7 +66,7 @@ const AdminLogin = () => {
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Enter your password"
                 style={{ borderRadius: '15px' }}
-                {...register("password", { required: "Password is required", minLength:{value : 8,message:"Minimum 8 characters" }})}
+                {...register("password", { required: "Password is required", minLength:{value : 6,message:"Minimum 6 characters" }})}
               />
               <span className="toggle-eye" onClick={() => setShowPassword(!showPassword)}>
                {showPassword ? <FaEyeSlash /> : <FaEye />}

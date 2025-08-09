@@ -8,7 +8,7 @@ function Details(){
   return(
     <div className={styles.details}> 
       <div className='naming'>
-          <label htmlFor='fullname' className={styles.labels}><b style={{fontSize:'20px'}}>Name</b></label><br/>
+          <label htmlFor='fullname' className={styles.labels}><b style={{fontSize:'20px'}} ><p style={{display:'inline',color:"red"}}>* </p>Name</b></label><br/>
           <input type='text' placeholder='Your name' name='name' className={styles.inputs}
           {...register('name',
               { required: true,
@@ -17,7 +17,7 @@ function Details(){
                {errors.Name && <p style={{color:'red'}}>{errors.Name.message}</p>}
       </div> 
       <div className='mailing'>
-          <label htmlFor='email' className={styles.labels}><b style={{fontSize:'20px'}}>Email</b></label><br/>
+          <label htmlFor='email' className={styles.labels}><b style={{fontSize:'20px'}}><p style={{display:'inline',color:"red"}}>* </p>Email</b></label><br/>
           <input type='email' placeholder='your@email.com' name='email' className={styles.inputs}
           {...register('email', 
           { required: true ,

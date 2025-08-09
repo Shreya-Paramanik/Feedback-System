@@ -1,7 +1,7 @@
 .btn{
     width:95%;
     padding:12px;
-    background:linear-gradient(to right,#9392dc,#bc9fdf);
+    background:linear-gradient(to right,#8684e5,#a480cf);
     color:white;
     cursor: pointer;
     border-radius: 16px;
@@ -11,5 +11,5 @@
   }
 
 .btn:hover{
-      background:linear-gradient(to right,#7a5cf3,#6750a4);
+      background:linear-gradient(to right,#8e73f9,#694abf);
   }

@@ -18,6 +18,7 @@ function Form(){
     // console.log(data);
     // navigate("/thankYou");
     const formData = new FormData();
+    console.log(formData);
     formData.append("name", data.name);
     formData.append("email", data.email);
     formData.append("type", data.type);

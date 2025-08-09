@@ -34,7 +34,7 @@ const FeedbackTable = () => {
         query.push(`status=${status}`); 
        
       const Urlstring = query.length>0 ?`${query.join("&")}`:""
-      console.log(Urlstring);
+      // console.log(Urlstring);
       try {
         const response = await axios.get(`http://127.0.0.1:8000/dashboard/feedback?${Urlstring}`);
         // console.log(response.request.status);
@@ -53,6 +53,8 @@ const FeedbackTable = () => {
         console.log(error);
       }
     }
+
+    console.log(Data);
     handleChange();
   },[search,types,rate,status]);
 
@@ -86,6 +88,41 @@ const FeedbackTable = () => {
       
   };
 
+  const handleClick = async ()=> {
+   
+    let query = [];
+      if (search)
+        query.push(`q=${encodeURIComponent(search)}`);
+      if (types)
+        query.push(`type=${types}`);
+      if (rate)
+        query.push(`rate=${rate}`);
+      if(status)
+        query.push(`status=${status}`); 
+       
+      const Urlstring = query.length>0 ?`${query.join("&")}`:""
+      // console.log(Urlstring);
+      try {
+    const response = await axios.post(`http://127.0.0.1:8000/download_csv?${Urlstring}`, null, {
+      responseType: 'blob', // Important: expect a file
+    });
+
+    // Create download link
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'feedback_data.csv'); // Filename
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+  } catch (error) {
+    console.log("Can't Download the file ", error);
+    alert("Error downloading CSV");
+  }
+
+  }
+
   
   return(
 
@@ -93,7 +130,7 @@ const FeedbackTable = () => {
   <div className="feedback-dashboard">
     <div className="dashboard-header">
       <h2>Feedback Dashboard</h2>
-      <button className="export-btn"> <GoDownload  size={25}/> Export CSV</button>
+      <button className="export-btn" onClick={handleClick}> <GoDownload  size={25}/> Export CSV</button>
     </div>
 
     <div className="filters">

@@ -13,7 +13,7 @@ const Rating = () => {
 
   return (
     <div className="rating-div">
-        <label className="labels"><b style={{fontSize:'20px'}}>Rating:</b></label>
+        <label className="labels"><b style={{fontSize:'20px'}}><p style={{display:'inline',color:"red"}}>* </p>Rating:</b></label>
         <br/>
         <div className='stars'>
           <input type="hidden" {...register("rate",{required:true})}/>

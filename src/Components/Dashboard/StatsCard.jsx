@@ -6,15 +6,19 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 import { GoPeople } from "react-icons/go";
 
 
-const stats = [
-  { label: "Total Feedback", value: 5, icon: <FiMessageSquare color='blue' />},
-  { label: "Pending Review", value: 3, icon: <FiClock />},
-  { label: "Average Rating", value: "3.2", icon: <FaArrowTrendUp color='green' />},
-  { label: "Bug Reports", value: 1, icon: <GoPeople  color='purple'/>},
-];
 
-const StatsCards = () => (
-  <div className="dash_stats-cards">
+
+const StatsCard = ({Data})=> {
+  const stats = [
+    { label: "Total Feedback", value: Data.totalFeedback, icon: <FiMessageSquare color='blue' />},
+    { label: "Pending Review", value: Data.pendingFeedback, icon: <FiClock />},
+    { label: "Average Rating", value: Data.averageRating, icon: <FaArrowTrendUp color='green' />},
+    { label: "Bug Reports", value: Data.bug_report, icon: <GoPeople  color='purple'/>},
+  ];
+
+
+  return (
+    <div className="dash_stats-cards">
     {stats && stats.map((stat, i) => (
       <div className="dash_card" key={i}>
         <div className="dash_value">{stat.value}</div>
@@ -23,6 +27,8 @@ const StatsCards = () => (
       </div>
     ))}
   </div>
-);
 
-export default StatsCards;
+  )
+};
+
+export default StatsCard
