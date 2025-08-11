@@ -16,8 +16,21 @@ const FeedbackTable = () => {
   const [rate,setRate] = useState("");
   const [status,setStatus] = useState("");
 
+  const [debouncedQuery,setDebouncedQuery] = useState("");
   const [Data,setData]=useState([]);
 
+
+  useEffect(()=>{
+   
+    const handler = setTimeout(() =>{
+      setDebouncedQuery(search);
+    },500);
+
+    return() =>{
+      clearTimeout(handler);
+    }
+
+  },[search]);
 
   useEffect(()=>{
     
@@ -56,7 +69,7 @@ const FeedbackTable = () => {
 
     console.log(Data);
     handleChange();
-  },[search,types,rate,status]);
+  },[debouncedQuery,types,rate,status]);
 
 
 
